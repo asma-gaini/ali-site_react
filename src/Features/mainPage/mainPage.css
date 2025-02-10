@@ -1,0 +1,107 @@
+/* تنظیمات باکس اصلی (mainSection) */
+
+@font-face {
+  font-family: iransans;
+  src: url(/fonts/FontsFree-Net-ir_sans.ttf);
+}
+
+.mainSection {
+  position: relative;
+  font-family: "iransans";
+  margin-left: calc(5.5rem + 3rem); /* فاصله از سمت چپ نوار ناوبری */
+  margin-top: 1rem; /* فاصله از بالای صفحه */
+  margin-right: 1rem; /* فاصله از سمت راست */
+  margin-bottom: 1rem; /* فاصله از پایین */
+  background-color: #fff; /* پس‌زمینه سفید */
+  border-radius: 10px; /* گوشه‌های گرد */
+  padding: 10px; /* فاصله داخلی */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* سایه کوچک */
+  height: calc(100vh - 3rem); /* ارتفاع کامل صفحه منهای فاصله از بالا */
+  overflow: auto; /* در صورت نیاز، اسکرول را فعال می‌کند */
+  transition: margin 0.3s ease; /* اضافه کردن انیمیشن نرم برای فاصله‌ها */
+  z-index: 1; /* لایه کمتر برای قرارگیری زیر متن هاور */
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin: 25px;
+}
+.profileImage {
+  width: 250px;
+}
+.personalInfo {
+  direction: rtl; /* جهت راست به چپ */
+  text-align: right; /* متن راست‌چین */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* فاصله خطوط */
+  font-weight: bold;
+}
+
+.description {
+  background-color: #3f51b570;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  direction: rtl;
+  text-align: center;
+  line-height: 1.6;
+}
+.description_title {
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* تنظیمات ریسپانسیو */
+@media (max-width: 1024px) {
+    .profileImage {
+        width: 170px;
+      }
+      .profile {
+        gap: 15px;
+      }
+      .description {
+        margin: 10px;
+        padding: 10px;
+        font-size: 12px;
+      }
+  }
+  
+  /* لپ‌تاپ و دسکتاپ (بیشتر از 1280px) */
+  @media (min-width: 1280px) {
+    body {
+      /* background-color: rgb(239, 201, 239); */
+    }
+  }
+
+@media (max-width: 768px) {
+  .mainSection {
+    margin-left: calc(4rem + 3rem); /* فاصله کمتر در صفحه‌های تبلت */
+  }
+  .profileImage {
+    width: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainSection {
+    margin-left: calc(3.5rem + 2rem); /* فاصله کمتر در صفحه‌های موبایل */
+  }
+  .profileImage {
+    width: 100px;
+  }
+  .profile {
+    gap: 15px;
+  }
+  .personalInfo {
+    font-size: 10px;
+  }
+  .description {
+    margin: 10px;
+    padding: 10px;
+    font-size: 11px;
+  }
+}
