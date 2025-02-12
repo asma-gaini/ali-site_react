@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import feather from "feather-icons"; // برای آیکون‌ها
 import "./VerticalNavigation.css";
 
