@@ -19,6 +19,16 @@ body {
   z-index: 10;
 }
 
+.navbar__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__item {
+  margin: 10px 0;
+}
+
 .navbar__link {
   position: relative;
   display: flex;
@@ -27,7 +37,15 @@ body {
   height: 3.5rem;
   width: 5.5rem;
   color: #6a778e;
+  text-decoration: none;
   transition: 250ms ease all;
+}
+
+.navbar__icon {
+  width: 24px;
+  height: 24px;
+  color: #6a778e;
+  transition: color 0.3s ease;
 }
 
 .navbar__link span {
@@ -43,27 +61,22 @@ body {
   transition: 250ms ease all;
   border-radius: 17.5px;
   z-index: 20;
+  white-space: nowrap;
 }
 
 .navbar__link:hover {
   color: #fff;
-  top: 0;
-  left: 1rem;
-  width: 3.5rem;
-  height: 3.5rem;
   background: #406ff3;
   border-radius: 17.5px;
-  transition: 250ms cubic-bezier(1, 0.2, 0.1, 1.2) all;
 }
 
-.navbar:not(:hover) .navbar__link:focus,
+.navbar__link:hover .navbar__icon {
+  color: #fff;
+}
+
 .navbar__link:hover span {
   opacity: 1;
   transform: translate(0);
-}
-
-.navbar__menu {
-  position: relative;
 }
 
 /* تنظیمات برای صفحه‌های کوچک‌تر */
